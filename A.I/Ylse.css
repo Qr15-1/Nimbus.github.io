@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Franja Superior --- */
+.top-bar {
+    background-color: #000000;
+    color: white;
+    padding: 10px 5%;
+    text-align: left;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.top-bar p {
+    margin: 0;
+    color: white;
+}
+
+.top-bar-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top-bar-links a:hover {
+    color: #e0e0e0;
+}
+
+/* --- Barra de navegación Principal --- */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9e2a2f;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #9e2a2f;
+}
+
+/* --- Submenú Desplegable --- */
+.hidden-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    padding: 8px 0;
+    border-radius: 5px;
+    list-style: none;
+    min-width: 160px;
+    margin: 0;
+}
+
+.nav-links li:hover > .hidden-options {
+    display: block;
+}
+
+.hidden-options li {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.hidden-options li a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hidden-options li a:hover {
+    background-color: #9e2a2f;
+    color: #ffffff;
+}
+
+
+
+
+/* --- Seccion 1  --- */
+.bienvenida {
+    padding: 50px 40px -22px 40px; 
+    margin: 0 auto; 
+    text-align: center;
+    background-image: url('imagenes/Fondo sobre mi A.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.bienvenida .texto {
+    margin-bottom: 10px; 
+}
+
+/* Imagen 1 */
+.bienvenida .imagenes .imagen-1 {
+    width: 250px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0px;
+    position: relative; 
+    top: -70px; 
+    left: -320px; 
+}
+
+/* Imagen 2 */
+.bienvenida .imagenes .imagen-2 {
+    width: 400px; 
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0px;
+    position: relative; 
+    top: 0px; 
+    left: 10px; 
+}
+
+/* Imagen 3 */
+.bienvenida .imagenes .imagen-3 {
+    width: 250px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0px;
+    position: relative; 
+    top: -70px; 
+    left: 320px; 
+}
+
+
+/* Estilo para "BIENVENIDO" */
+.bienvenida .texto .bienvenido {
+    font-size: 2.8rem; 
+    font-weight: bold; 
+    color: #000; 
+    margin-bottom: 0px; 
+    position: relative; 
+    top: -200px; 
+    left: 10px; 
+    text-align: center; 
+}
+
+
+/* Estilo para "MI NOMBRE ES" */
+.bienvenida .texto .mi-nombre {
+    font-size: 1.3rem; 
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+    position: relative; 
+    top: -50px; 
+    left: 15px; 
+    text-align: center; 
+}
+
+/* Estilo para "ALEXANDRA" */
+.bienvenida .texto .nombre {
+    color: #6a1500; 
+    font-weight: bold; 
+    font-size: 1.4rem; 
+    position: relative; 
+    top: 0; 
+    left: 0; 
+}
+
+.bienvenida .texto .subtitulo {
+    font-size: 0.9rem; 
+    color: #8b0e0e; 
+    margin-bottom: 10px; 
+    text-align: center; 
+    position: relative; 
+    top: -56px; 
+    left: 5px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seccion 2 */
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    background-image: url('imagenes/Fondo quiada 2.png');
+    color: #212529;
+    line-height: 1.55; 
+}
+
+.container {
+    max-width: 1100px; 
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+/* Estilos de la Sección de Servicios  */
+.services-section {
+    padding: 45px 0; 
+    background-color: #ffffff;
+    margin-top: 30px; 
+    margin-bottom: 30px; 
+}
+
+/* Encabezado */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+/* Subtítulo (Rojo) */
+.section-subtitle {
+    color: #9e2a2f;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px; 
+    margin-bottom: 4px; 
+    display: block;
+}
+
+/* Título Principal (Oscuro) */
+.section-title {
+    font-size: 2.1em; 
+    font-weight: bold;
+    color: #212529;
+    margin-top: 0;
+}
+
+/* Cuadrícula de Servicios */
+.services-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+}
+
+/* Tarjeta de Servicio  */
+.service-card {
+    background-color: #ffffff;
+    padding: 25px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04); 
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; 
+}
+
+.service-card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /
+}
+
+/* Icono */
+.icon-wrapper {
+    margin-bottom: 15px; 
+}
+
+.service-icon {
+    font-size: 2.1em; 
+    color: #9e2a2f;
+}
+
+/* Título de Tarjeta */
+.service-title {
+    font-size: 1.1em; 
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 8px; 
+}
+
+/* Descripción de Tarjeta */
+.service-description {
+    font-size: 0.85em; 
+    color: #6c757d;
+    line-height: 1.6; 
+}
+
+/* Responsividad (Ajustes menores) */
+@media (max-width: 768px) {
+    .services-grid {
+        
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px; 
+    }
+    .section-title {
+        font-size: 1.9em; 
+    }
+    .service-card {
+        padding: 22px 18px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .services-section {
+        padding: 35px 0; 
+    }
+     .section-header {
+        margin-bottom: 30px; 
+    }
+    .section-title {
+        font-size: 1.7em; 
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px; 
+    }
+    .service-card {
+        padding: 20px 15px; 
+    }
+    .service-icon {
+        font-size: 2em; 
+    }
+    .service-title {
+        font-size: 1.05em; 
+    }
+    .service-description {
+        font-size: 0.82em; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Seccion 3 --- */
+
+.contenedor-textos {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.bienvenida .contenedor-textos p {
+    margin-bottom: 5px; 
+}
+
+.bienvenida .contenedor-textos p:last-child {
+    margin-bottom: 0; 
+}
+
+.bienvenida .texto .descripcion-1,
+.bienvenida .texto .descripcion-2 {
+    font-size: 0.7rem; 
+    color: #000000; 
+    line-height: 1.5;
+    text-align: justify; 
+    margin-bottom: 20px;
+    position: relative; 
+    max-width: 300px; 
+    width: 500%; 
+    top: -60px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Seccion 4  --- */
+
+.fun-facts {
+    background-image: url('imagenes/Fondo quiada 2.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 35px 10px; 
+    text-align: center;
+    border-radius: 0; 
+    box-shadow: none; 
+    width: 100%; 
+    margin: 0; 
+    min-height: 600px; 
+    overflow: hidden; 
+}
+.fun-facts .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.fun-facts .section-title .highlight {
+    color: #9f2000; 
+}
+
+.fun-facts .section-subtitle {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fact-item {
+    text-align: center;
+}
+
+.fact-item h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.fact-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.fact-item hr {
+    border: none;
+    border-top: 2px solid #000;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .facts-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.instagram-link {
+    display: inline-flex; 
+    align-items: center; 
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #E4405F; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.footer-mini {
+    background-color: #111;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    border-top: 1px solid #222;
+}
+
+.footer-mini-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-mini-logo {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #eee;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.footer-mini-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-mini-socials a {
+    color: #666;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-mini-socials a:hover {
+    color: #fff;
+}
+
+.footer-mini-copy {
+    font-size: 0.75em;
+    color: #555;
+}
